@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chloe Tseng</title>
+  <meta name="description" content="Chloe Tseng — Operations Research & Engineering at Cornell. Strategy, technology, and products.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#about" class="nav__name">Chloe Tseng</a>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="frame">
+
+    <!-- 01 ABOUT -->
+    <section id="about" class="about">
+      <div class="about__intro cell">
+        <h1 class="display">Hi, I'm Chloe</h1>
+        <p class="heading tagline">Using strategy and technology to build products.</p>
+      </div>
+      <div class="about__photo cell">
+        <img src="assets/portrait.jpg" alt="Chloe standing on a terrace overlooking Los Angeles">
+      </div>
+
+      <dl class="about__facts cell">
+        <div><dt>School</dt><dd>Cornell University</dd></div>
+        <div><dt>Major</dt><dd>Operations Research &amp; Engineering</dd></div>
+        <div><dt>Minors</dt><dd>Computer Science, Business</dd></div>
+        <div><dt>Previously</dt><dd>Intuitive</dd></div>
+        <div><dt>Based in</dt><dd>New York</dd></div>
+      </dl>
+      <div class="about__bio cell">
+        <p class="mono">
+          I study Operations Research, Computer Science, and Business at Cornell,
+          and I'm drawn to the space where analytical rigor meets product thinking.
+          Across internships, coursework, and extracurriculars — most recently at
+          Intuitive — I've worked in data science, product management, operations,
+          and consulting.
+        </p>
+        <a href="#projects" class="btn">View work ↓</a>
+      </div>
+      <span class="pagenum">01 / 04</span>
+    </section>
+
+    <!-- 02 PROJECT INDEX -->
+    <section id="projects" class="index">
+      <div class="section-head cell">
+        <h2 class="heading">Selected Projects</h2>
+        <span class="label">02 / 04</span>
+      </div>
+      <div class="index__grid">
+        <a href="#transpose" class="card cell">
+          <div class="card__img"><img src="assets/transpose-poster.jpg" alt="Transpose app reading a board as Clean Girl, mostly casual"></div>
+          <div class="card__meta">
+            <span class="card__title">Transpose</span>
+            <span class="label">Personal Project · 2026</span>
+          </div>
+        </a>
+        <a href="#stride" class="card cell">
+          <div class="card__img"><img src="assets/case-thumb.jpg" alt="Capital One Stride credit card product slide"></div>
+          <div class="card__meta">
+            <span class="card__title">Capital One Stride</span>
+            <span class="label">Case Competition · 2026</span>
+          </div>
+        </a>
+        <div class="card card--empty cell">
+          <span class="label">More soon</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 PROJECT DETAILS -->
+    <section id="transpose" class="project">
+      <div class="project__head cell">
+        <span class="label">01 — Personal Project</span>
+        <h2 class="display">Transpose</h2>
+        <p class="label">From Pinterest board to Depop search</p>
+      </div>
+      <div class="project__media cell">
+        <video controls preload="metadata" poster="assets/transpose-poster.jpg" playsinline>
+          <source src="assets/transpose-demo.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project__body cell">
+        <div class="block">
+          <h3 class="label">The problem</h3>
+          <p class="mono">
+            A Pinterest board captures a vibe, but not a shopping list. Transpose turns a
+            board of outfit images into concrete, shoppable searches on Depop — “sheer halter
+            satin top” instead of just “y2k.”
+          </p>
+        </div>
+        <div class="block">
+          <h3 class="label">How it works</h3>
+          <ul class="mono list">
+            <li>Embeds each board image with FashionCLIP and averages them into one “vibe vector”</li>
+            <li>Ranks ~44k labeled fashion items by cosine similarity to find the closest pieces</li>
+            <li>Tags the board’s aesthetic and garment details with zero-shot classification</li>
+            <li>Predicts the occasion with a trained classifier on frozen embeddings</li>
+            <li>Builds Depop search links from aesthetic + detail + garment</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3 class="label">Stack</h3>
+          <p class="mono">Python · PyTorch · FashionCLIP · Streamlit</p>
+        </div>
+        <a class="btn" href="https://github.com/ct685/pinterest-to-depop-recommendation-engine" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+    </section>
+
+    <section id="stride" class="project project--flip">
+      <div class="project__head cell">
+        <span class="label">02 — Case Competition</span>
+        <h2 class="display">Stride Across the Pacific</h2>
+        <p class="label">Capital One × Consult for America 2026 · Top 10% of 200+ teams</p>
+      </div>
+      <div class="project__body cell">
+        <div class="block">
+          <h3 class="label">The case</h3>
+          <p class="mono">
+            Pitch a new product for Capital One to enter a new international market. We chose
+            Australia, where 73% of Big Four bank customers are dissatisfied and new regulation
+            is opening the door to challengers.
+          </p>
+        </div>
+        <div class="block">
+          <h3 class="label">Our recommendation</h3>
+          <ul class="mono list">
+            <li>Launch Capital One Stride, a low-fee card built for customers who carry a balance</li>
+            <li>Enter through a banking-as-a-service partnership with Cuscal, then migrate to a full license</li>
+            <li>Use open-banking data and AI underwriting as the edge the incumbents can’t copy</li>
+          </ul>
+        </div>
+        <div class="stats">
+          <div><span class="stat">Top 10%</span><span class="label">Of 200+ teams</span></div>
+          <div><span class="stat">AUD $19–35M</span><span class="label">Saved vs. direct licensing</span></div>
+          <div><span class="stat">AUD $49M</span><span class="label">Annual value of digital tools</span></div>
+        </div>
+        <a class="btn" href="assets/capital-one-case.pdf" target="_blank" rel="noopener">Download deck (PDF) ↓</a>
+      </div>
+      <div class="project__media cell">
+        <div class="slider" data-slider>
+          <div class="slider__track">
+            <!-- slides injected by script.js -->
+          </div>
+          <div class="slider__controls">
+            <button type="button" class="btn btn--small" data-prev aria-label="Previous slide">←</button>
+            <span class="label" data-count>01 / 18</span>
+            <button type="button" class="btn btn--small" data-next aria-label="Next slide">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 OFF THE CLOCK -->
+    <section class="offclock">
+      <div class="offclock__text cell">
+        <span class="label">03 / 04</span>
+        <h2 class="heading">Off the clock</h2>
+        <div>
+          <h3 class="label interests__label">Interests</h3>
+          <ul class="interests">
+            <li>Cooking &amp; baking</li>
+            <li>Art history</li>
+            <li>Fishing &amp; crabbing</li>
+            <li>Olivia Rodrigo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="offclock__img cell"><img src="assets/crabbing.jpg" alt="Chloe and a friend holding a crab by the Golden Gate Bridge"></div>
+      <div class="offclock__img cell"><img src="assets/friends.jpg" alt="Chloe with two friends on a deck at dusk"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <footer id="contact" class="contact">
+      <div class="cell">
+        <span class="label">04 / 04</span>
+        <h2 class="display">Get in touch</h2>
+      </div>
+      <div class="contact__links cell">
+        <a href="mailto:ct685@cornell.edu">ct685@cornell.edu</a>
+        <a href="https://www.linkedin.com/in/chloetseng/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/ct685" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <span class="edge-label" aria-hidden="true">Chloe Tseng — Portfolio 2026</span>
+
+  <script src="script.js"></script>
+</body>
+</html>
